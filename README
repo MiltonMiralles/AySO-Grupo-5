@@ -1,0 +1,16 @@
+Requirments:
+    -Create k8s's cluster with minikube.
+    -Create Dockerfile with apache and copy an index.html with prayer "Hola mundo, somos el grupo 5 de la UTN"
+    -Build and push the image to hub.docker.com with the 'v1' tag.
+    -Create namespace named "grupo5"
+    -Create a Deployment with kubernetes in the ns that created above. 
+        Requirments: 2 replicates and must lift the previous apache image.
+    -Upload all the code to github.
+    -Create this README.
+
+Deployment coments:
+    - The docker container commands:
+        - docker image -t grupo5:v1
+        - docker run -d -p 80:80 --name: name-you-prefeer grupo5:v1
+    -This container will run in your localhost:80
+
