@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grupo5-deploy
+  labels:
+    grupo5: webserver
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      grupo5: webserver
+  template:
+    metadata:
+      labels:
+        grupo5: webserver
+    spec:
+      containers:
+      - name: grupo5-apache
+        image: tekibonvi/grupo5-tp:v1
+        ports:
+        - containerPort: 8080
