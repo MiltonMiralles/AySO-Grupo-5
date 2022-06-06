@@ -1,5 +1,4 @@
-FROM bitnami/apache
+FROM httpd:2.4
 
-COPY index.html /opt/bitnami/apache/htdocs/index.html
+COPY ./hola_mundo /usr/local/apache2/htdocs/
 
-CMD ["apachectl", "-D", "FOREGROUND"]
