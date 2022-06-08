@@ -1,6 +1,7 @@
 Requirments:
     -Create k8s's cluster with minikube.
-    -Create Dockerfile with apache and copy an index.html with prayer "Hola mundo, somos el grupo 5 de la UTN"
+    -Create Dockerfile with apache and copy an index.html with the message: "Hola mundo, somos el grupo 5 de la UTN"
+	-In this task, we decided to change the idnex.html for directory called hola_mundo
     -Build and push the image to hub.docker.com with the 'v1' tag.
     -Create namespace named "grupo5"
     -Create a Deployment with kubernetes in the ns that created above. 
@@ -14,3 +15,18 @@ Deployment coments:
         - docker run -d -p 80:80 --name: name-you-prefeer grupo5:v1
     -This container will run in your localhost:80
 
+Deploy this in k8s:
+	
+	pwd: .../AySO-Grupo-5
+	
+Create Namespace: kubectl create -f namespace.yaml
+
+See Namespace created: kubectl get namespaces 
+
+Create Deployment: kubectl create -f deployment.yaml
+
+Catch the name of the pod you wants to expose: kubectl getpods -n grupo5
+
+Expose the pod: kubectl port-forward PODNAME 80:8080
+		
+See the result:	localhost:8080/	
