@@ -1,7 +1,7 @@
 Requirments:
     -Create k8s's cluster with minikube.
     -Create Dockerfile with apache and copy an index.html with the message: "Hola mundo, somos el grupo 5 de la UTN"
-	-In this task, we decided to change the idnex.html for directory called hola_mundo
+	-In this task, we decided to change the index.html for directory called hola_mundo
     -Build and push the image to hub.docker.com with the 'v1' tag.
     -Create namespace named "grupo5"
     -Create a Deployment with kubernetes in the ns that created above. 
