@@ -27,6 +27,6 @@ Create Deployment: kubectl create -f deployment.yaml
 
 Catch the name of the pod you wants to expose: kubectl getpods -n grupo5
 
-Expose the pod: kubectl port-forward PODNAME 80:8080
+Expose the pod: kubectl -n grupo5 port-forward PODNAME 8080:8080
 		
 See the result:	localhost:8080/	
